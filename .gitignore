@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Log files
+*.log
+
+# Package lock file
+package-lock.json
+
+# VS Code settings
+.vscode/
+
+# Ignore compiled output or build folders
+dist/
+build/
