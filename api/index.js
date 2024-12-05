@@ -1,7 +1,13 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
-mongoose.connect('mongodb+srv://Deep3713:Deepakkk%233713@mern-estate.6sylb.mongodb.net/?retryWrites=true&w=majority&appName=mern-estate')
+mongoose.connect(process.env.MONGO).then(()=>{
+    console.log('Database Connected');
+}).catch((err)=>{
+    console.log('Database Connection Failed');
+});
 const app=express();
 
 app.listen(3000,()=>{
