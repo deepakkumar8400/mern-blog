@@ -8,6 +8,7 @@ mongoose.connect(process.env.MONGO).then(()=>{
 }).catch((err)=>{
     console.log('Database Connection Failed');
 });
+
 const app=express();
 
 app.listen(3000,()=>{
@@ -15,5 +16,7 @@ app.listen(3000,()=>{
 });
 
 app.get('/',(req,res)=>{
-    res.send("Welcome")
+    res.json({
+        message: "Welcome to our API"
+    });
 })
