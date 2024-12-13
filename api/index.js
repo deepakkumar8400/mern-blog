@@ -17,3 +17,4 @@ app.listen(3000,()=>{
 });
 
 app.use('/api/user',userRouter);
+app.use('/api/auth',userRouter);
